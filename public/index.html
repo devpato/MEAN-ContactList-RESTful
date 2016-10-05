@@ -1,5 +1,5 @@
 <!DOCTYPE>
-<html ng-app>
+<html ng-app="myApp">
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -10,7 +10,7 @@
     </head>
     <body>
         
-        <div class="container">
+        <div class="container" ng-controller="AppCtrl">
             <h1>Contac List</h1>
             <table class = "table">
                 <thead>
@@ -23,5 +23,6 @@
             </table>
         </div>    
         <script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js></script>
+        <script src="controllers/controller.js"></script>
     </body>
 </html>    
