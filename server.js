@@ -1,9 +1,11 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function(req,res){
+/*app.get('/', function(req,res){
    res.send('Hello World from server.js') 
-});
+});*/
+
+app.use(express.static(__dirname + "/public")); //create public folder
 
 app.listen(3000);
 console.log("Server running on port 3000");
