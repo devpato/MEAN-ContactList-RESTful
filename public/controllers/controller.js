@@ -1,5 +1,6 @@
 var myApp = angular.module('myApp', []);
 myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
+$http.get('/contactlist');
     //Can data
     person1 = {
         name: 'Tim',
