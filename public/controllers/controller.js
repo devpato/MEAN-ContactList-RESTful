@@ -32,6 +32,12 @@ myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
         });
     };  
     //Update
+    $scope.update = function() {
+        console.log($scope.contact._id);
+        $http.put('/contactList/' + $scope.contact._id, $scope.contact).success(function(response){
+           refresh();   
+        });          
+    }; 
 }]);
 
 
