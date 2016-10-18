@@ -8,7 +8,7 @@ myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
         });
      };
     refresh();
-    
+    //Add
     $scope.addContact = function () {
         console.log($scope.contact);
         //this sends the input data to the server
@@ -17,7 +17,21 @@ myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
             refresh();
         });     
     };
-    
+    //Remove
+    $scope.remove = function(id) {
+        console.log(id);
+        $http.delete('/contactList/' + id).success(function(response) {
+            refresh();
+        });
+    };
+    //Edit
+    $scope.edit = function(id) {
+        console.log(id);
+        $http.get('/contactList/' + id).success(function(response) {
+            $scope.contact = response;
+        });
+    };  
+    //Update
 }]);
 
 
