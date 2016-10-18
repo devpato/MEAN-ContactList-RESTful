@@ -38,6 +38,9 @@ myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
            refresh();   
         });          
     }; 
+    $scope.deselect = function() {
+        $scope.contact = "";                 
+    }; 
 }]);
 
 

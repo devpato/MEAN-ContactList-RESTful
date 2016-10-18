@@ -29,7 +29,7 @@
                         <td><input class="form-control" ng-model="contact.number"></td>
                         <td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
                         <td><button class="btn btn-info" ng-click="update()">Update</button></td>
-                        <td><button class="btn btn-info" ng-click="addContact()">Clear</button></td>
+                        <td><button class="btn btn-info" ng-click="deselect()">Clear</button></td>
                     </tr>
                     <tr ng-repeat = "contact in contactList">
                         <td>{{contact.name}}</td>
@@ -37,6 +37,7 @@
                         <td>{{contact.number}}</td>
                         <td><button class="btn btn-danger" ng-click="remove(contact._id)">X</button></td>
                         <td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
+                        <td>&nbsp;</td>
                     </tr>
                 </tbody>
             </table>
